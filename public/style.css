@@ -1,0 +1,1595 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Lato:wght@400;700&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+  color: var(--negro);
+}
+
+:root {
+  --negro: #101010;
+  --blanco: #f7f7f7;
+  --amarillo: #ffc107;
+}
+
+.genero {
+  padding: 8rem 0 4rem 0;
+}
+.popular,
+.en-oferta,
+section {
+  padding: 4rem 0;
+}
+
+header {
+  height: 4.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  background-color: var(--amarillo);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.sidebar a:hover {
+  font-weight: bold;
+}
+.header-izq {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#logo {
+  font-family: "Barrio";
+  font-size: 2.5rem;
+  padding: 0 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 1.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: var(--negro);
+  color: var(--amarillo);
+  transition: 0.2s;
+}
+
+input[type="search"] {
+  padding: 0.8rem;
+  padding-left: 1.3rem;
+  text-indent: 1.3rem;
+  width: 25rem;
+  border: none;
+  border-radius: 1.4rem;
+}
+
+input[type="search"]:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #bebebe;
+  font-size: 1rem;
+}
+
+.header-der {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-der-icono {
+  background-color: var(--blanco);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  
+}
+
+.header-der i.fa-regular.fa-bell:hover,
+.header-der i.fa-solid.fa-cart-shopping:hover,
+.header-der a i.fa-solid.fa-user:hover {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+
+.header-der i.fa-regular.fa-bell,
+.header-der i.fa-solid.fa-cart-shopping,
+.header-der a i.fa-solid.fa-user {
+  background-color: #ffc107;
+  color: black;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+
+.buscador {
+  position: relative;
+}
+
+#buscador {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.9rem;
+  font-size: 1.2rem;
+  color: #a7a7a7;
+  opacity: 0.5;
+}
+
+
+
+/*hero*/
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img/libros.jpg) center center no-repeat;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4.375rem;
+}
+
+.hero-texto h1,
+.hero-texto h2 {
+  color: var(--blanco);
+  text-align: center;
+}
+
+.hero-texto h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-texto h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.menu-generos {
+  background-color: var(--amarillo);
+  padding: 2.5rem 5rem;
+  border-radius: 4rem;
+  position: absolute;
+  top: 52.5%;
+}
+
+.menu-generos a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-right: 0.0938rem solid var(--negro);
+  padding: 1.2rem 3rem;
+}
+
+.menu-generos a:first-child {
+  padding-left: 0;
+}
+.menu-generos a:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/*container*/
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+/*seccion comprar*/
+.container-comprar {
+  padding: 5rem 0;
+}
+
+.libros-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.book {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid grey;
+  margin: 1rem;
+}
+.book h2 {
+  font-size: 1rem;
+}
+
+/*generos*/
+
+.genero {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.texto-ficcion h1 {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.texto-ficcion p {
+  max-width: 31.25rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#foto-ficcion {
+  width: 28.125rem;
+  height: 28.125rem;
+  background: url(img/ficcion.jpg) center center no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.comprar {
+  padding: 1.5rem 3rem;
+  font-size: 1.4rem;
+  background-color: var(--amarillo);
+  border: none;
+  border-radius: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+}
+
+/*Popular*/
+
+.popular h1 {
+  border-bottom: 0.125rem solid var(--amarillo);
+  max-width: fit-content;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.punto {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.punto::after {
+  content: "";
+  position: absolute;
+  top: -12%;
+  left: 215%;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  color: var(--amarillo);
+  background-color: var(--amarillo);
+}
+
+.popular-contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.libro-popular {
+  width: 20rem;
+}
+.libro-imagen{
+  width: 100%;
+  height: 50vh;
+};
+.slick-next:before,.slick-prev:before{
+  background-color: black;
+  border-radius: 50px;
+
+
+}
+.libro-imagen-1,
+.libro-imagen-2,
+.libro-imagen-3 {
+  background: url(img/libro1.jpg) no-repeat center center;
+  background-size: cover;
+
+  height: 30rem;
+}
+
+.libro-imagen-2 {
+  background: url(img/libro2.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.libro-imagen-3 {
+  background: url(img/libro3.jpg);
+  background-size: 100% 100%;
+}
+
+.libro-popular-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--amarillo);
+  height: 6rem;
+  border: 0.0625rem solid var(--negro);
+}
+
+.libro-popular-texto {
+  flex: 4;
+  padding: 0.8rem;
+  border-right: 0.0625rem solid var(--negro);
+}
+
+.libro-popular-texto p {
+  font-weight: 600;
+}
+
+.libro-popular-comprar a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 1rem;
+}
+
+/*En oferta*/
+
+.en-oferta h1 {
+  max-width: fit-content;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ofertas-contenedor {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-top: 0.125rem solid var(--negro);
+  border-bottom: 0.125rem solid var(--negro);
+  padding: 2rem 0;
+}
+
+.libro-oferta {
+  height: 18.75rem;
+  width: 12.5rem;
+  box-shadow: -0.5625rem 0.875rem 0rem 0rem var(--amarillo);
+}
+
+.libro-oferta img {
+  width: 100%;
+  height: 100%;
+}
+
+/*libros biograficos*/
+
+.libros-biograficos h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.libros-biograficos p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.libros-biograficos-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.libro-biografico {
+  padding: 3rem;
+  border: 0.5rem solid var(--amarillo);
+  scale: 80%;
+  max-height: fit-content;
+}
+
+.libro-biografico img {
+  scale: 80%;
+}
+
+.secundario {
+  scale: 70%;
+  opacity: 0.5;
+}
+
+.puntos-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.punto-biografico {
+  border-radius: 50%;
+  color: var(--amarillo);
+  background-color: var(--amarillo);
+  width: 1rem;
+  height: 1rem;
+}
+
+
+/* About US y Happy Customers */
+
+.aboutUs{
+  background-color: var(--amarillo);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.claseImagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgLibros{
+  max-width: 80%;
+  min-width: 15.625rem;
+}
+
+.divTexto{
+  max-width: 55rem;
+}
+
+.divTexto p{
+  line-height: 2rem;
+}
+
+h4{
+  text-decoration: underline; /*texto subrayado*/
+}
+
+
+
+
+/* TIPOGRAFIA */
+/* h1{
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 3.8rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4{
+  font-size: 2rem;
+}
+p{
+  font-size: 1.8rem;
+} */
+
+
+.textoCentro {
+text-align: center;
+margin: 0 auto;
+max-width: 50rem;
+padding: 1.25rem;
+}
+
+h2, p {
+margin:2px 14px;
+}
+
+
+.carousel-container {
+display: flex;
+overflow-x: scroll;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+width: 100%;
+gap: 1.25rem;
+padding: 0.625rem;
+overflow: hidden; /* mirar esto*/
+flex-wrap: wrap; /*mirar aca*/
+}
+
+.column {
+flex: 0 0 calc(33.33% - 2.5rem);
+scroll-snap-align: center;
+transform: scale(0.8);
+transition: transform 0.3s ease;  
+}
+
+.review {
+border-radius: 3%; /*borde redondos*/
+text-align: center;
+background-color: var(--amarillo); /*fondo de los comentarios*/
+width: 23.75rem; /*Ancho de los comentarios*/
+overflow-wrap: break-word; /*mirar esto*/
+height: 15.625rem;
+
+position: relative;
+}
+
+.review img {
+width: 8.75rem;
+height: 8.75rem;
+object-fit: cover;
+border-radius: 50%;
+
+
+top: -15%;
+position: absolute;
+transform: translateX(-50%); /*Centrar la imagen*/
+}
+
+.review h3 {
+font-size: 1.125rem;
+margin: 0.0625rem;
+
+
+padding-top: 6.875rem;
+}
+
+.review p {
+font-size: 0.875rem;
+}
+
+.buttons-container {
+text-align: center;
+margin-top: 0.625rem;
+}
+
+.column-button {
+display: inline-block;
+border-radius: 50%;
+background-color: gray;
+border: none;
+margin: 0 0.3125rem;
+cursor: pointer;
+opacity: 0.5;
+background-color: var(--amarillo);
+
+
+width: 1rem;
+height: 1rem;
+}
+
+.column-button.active {
+opacity: 1;
+}
+
+.estrellas {
+display: flex;
+justify-content: center;
+}
+.divicion-correo{
+  height: 4vh;
+}
+
+
+/* asdasdasd
+adasdasdas
+adasd
+asided
+asidedas
+dataas
+dataas
+datas
+dataasd */
+
+
+
+
+
+/* RESPONSIVE */
+
+/* Para 390x844: */
+
+@media (min-width: 390px ) and (max-width: 767px) {
+  header{
+    padding: 0rem;
+    height: 4rem;
+    
+  }
+#logo{
+  font-size: 1.5rem;
+}
+  .header-izq {
+    flex-direction: column;
+    gap: 0rem;
+    width: 111px;
+  }
+
+.header-der,nav,.menu-content{
+  display: none;
+}
+nav a{
+  font-size: 14px;
+  padding: 3px;
+}
+
+
+.menu-content.active {
+  display: flex;
+  
+}
+input[type="search"] {
+  padding: 0.8rem;
+  padding-left: 1.3rem;
+  text-indent: 1.3rem;
+  width: 137px;
+  border: none;
+  border-radius: 1.4rem;
+}
+.fa-regular, .far {
+  font-weight: 400;
+  height: 33px;
+}
+.menu-icon{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 35px;
+}
+#menu-icon{
+  margin-left: 10px;
+}
+
+
+  /*HERO*/
+
+  .hero {
+    height: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-texto h1 {
+    font-size: 2rem;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.2rem;
+  }
+
+  .menu-generos {
+    position: relative;
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3rem;
+  }
+
+
+  .menu-generos a {
+    display: flex; /* Cambiar de "block" a "flex" */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin: 0rem;
+    padding: 0.8rem 1rem;
+    border-right: none;
+    border-bottom: 0.0938rem solid var(--negro);
+  }
+
+  /* CONTAINER*/
+
+  .genero {
+    display: flex;
+    flex-wrap: wrap; /* Añade esta propiedad para que los elementos se envuelvan cuando el ancho de la pantalla sea menor */
+    justify-content: space-evenly;
+  }
+  
+  .texto-ficcion h1 {
+    font-size: 2rem; /* Reduce el tamaño de la fuente para adaptarse a pantallas más pequeñas */
+    margin-bottom: 0.5rem; /* Reduce el margen inferior para ahorrar espacio */
+  }
+  
+  .texto-ficcion p {
+    max-width: 22.5rem; /* Ajusta el ancho máximo para evitar desbordamientos */
+    font-size: 1rem; /* Reduce el tamaño de la fuente para adaptarse a pantallas más pequeñas */
+    margin-bottom: 1rem; /* Reduce el margen inferior para ahorrar espacio */
+  }
+  
+  #foto-ficcion {
+    width: 22.5rem; /* Ajusta el ancho para adaptarse al contenedor */
+    height: 22.5rem; /* Ajusta el alto para mantener la proporción */
+    background-size: contain; /* Cambia a 'contain' para asegurarte de que la imagen se ajuste dentro del contenedor */
+    border-radius: 1rem;
+  }
+  
+  .comprar {
+    padding: 1rem 2rem; /* Reduce el padding para ahorrar espacio */
+    font-size: 1.2rem; /* Reduce el tamaño de la fuente para adaptarse a pantallas más pequeñas */
+    border-radius: 2rem; /* Ajusta el radio de borde para que coincida con el tamaño reducido */
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+  }
+
+/* POPULAR */
+
+.popular h1 {
+  border-bottom: 0.125rem solid var(--amarillo);
+  max-width: 100%; /* Ajusta el ancho máximo para ocupar todo el espacio disponible */
+  padding-bottom: 0.5rem; /* Reduce el padding inferior para ahorrar espacio */
+  padding-right: 0.5rem; /* Reduce el padding derecho para ahorrar espacio */
+}
+
+.punto {
+  position: relative;
+  display: inline-block;
+  width: 3rem; /* Ajusta el ancho para adaptarse a pantallas más pequeñas */
+  height: 3rem; /* Ajusta el alto para adaptarse a pantallas más pequeñas */
+}
+
+.punto::after {
+  content: "";
+  position: absolute;
+  top: -12%;
+  left: 180%; /* Ajusta la posición para que el elemento esté visible en la pantalla */
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  color: var(--amarillo);
+  background-color: var(--amarillo);
+}
+
+.popular-contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Añade esta propiedad para que los elementos se envuelvan cuando el ancho de la pantalla sea menor */
+  justify-content: space-between;
+}
+
+.libro-popular {
+  width: 100%; /* Hace que el ancho ocupe todo el espacio disponible */
+  margin-bottom: 1rem; /* Agrega margen inferior para separar los elementos */
+}
+
+.libro-imagen-1,
+.libro-imagen-2,
+.libro-imagen-3 {
+  background: url(img/libro1.jpg) no-repeat center center;
+  background-size: cover;
+  height: 22.5rem; /* Ajusta el alto para adaptarse a pantallas más pequeñas */
+}
+
+.libro-imagen-2 {
+  background: url(img/libro2.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.libro-imagen-3 {
+  background: url(img/libro3.jpg);
+  background-size: 100% 100%;
+}
+
+.libro-popular-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--amarillo);
+  height: 6rem; /* Ajusta el alto para adaptarse a pantallas más pequeñas */
+  border: 0.0625rem solid var(--negro);
+}
+
+.libro-popular-texto {
+  flex: 4;
+  padding: 0.6rem; /* Reduce el padding para ahorrar espacio */
+  border-right: none; /* Elimina el borde derecho para ahorrar espacio */
+}
+
+.libro-popular-texto p {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0; /* Elimina el margen inferior para ahorrar espacio */
+}
+
+.libro-popular-comprar a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 0.5rem; /* Reduce el padding horizontal para ahorrar espacio */
+}
+
+
+
+  /*En oferta*/
+
+  .en-oferta h1 {
+    max-width: 100%; /* Ajusta el ancho máximo para ocupar todo el espacio disponible */
+    font-size: 1.5rem; /* Reduce el tamaño de fuente para adaptarse a pantallas más pequeñas */
+    margin-bottom: 1.5rem; /* Reduce el margen inferior para ahorrar espacio */
+  }
+  
+  .ofertas-contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Añade esta propiedad para que los elementos se envuelvan cuando el ancho de la pantalla sea menor */
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    border-top: 0.125rem solid var(--negro);
+    border-bottom: 0.125rem solid var(--negro);
+    padding: 1.5rem 0; /* Reduce el padding vertical para ahorrar espacio */
+  }
+  
+  .libro-oferta {
+    height: 15rem; /* Ajusta el alto para adaptarse a pantallas más pequeñas */
+    width: 10rem; /* Ajusta el ancho para adaptarse a pantallas más pequeñas */
+    box-shadow: -0.375rem 0.625rem 0rem 0rem var(--amarillo); /* Ajusta la sombra para adaptarse a pantallas más pequeñas */
+    margin-bottom: 1.5rem; /* Agrega margen inferior para separar los elementos */
+  }
+  
+  .libro-oferta img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /*libros biograficos*/
+
+
+
+  /* About US */
+
+  .aboutUs {
+    background-color: var(--amarillo);
+    display: flex;
+    flex-wrap: wrap; /* Añade esta propiedad para que los elementos se envuelvan cuando el ancho de la pantalla sea menor */
+    justify-content: space-evenly;
+    padding: 1rem; /* Ajusta el padding para adaptarse a pantallas más pequeñas */
+  }
+  
+  .claseImagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ajusta el ancho para ocupar todo el espacio disponible */
+    margin-bottom: 1rem; /* Agrega margen inferior para separar los elementos */
+  }
+  
+  .imgLibros {
+    max-width: 100%; /* Ajusta el ancho máximo para ocupar todo el espacio disponible */
+    min-width: 10rem; /* Ajusta el ancho mínimo para adaptarse a pantallas más pequeñas */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
+  }
+  
+  .divTexto {
+    max-width: 100%; /* Ajusta el ancho máximo para ocupar todo el espacio disponible */
+    margin-bottom: 1rem; /* Agrega margen inferior para separar los elementos */
+
+  }
+  
+  .divTexto p {
+    line-height: 1.8rem; /* Reduce el line-height para adaptarse a pantallas más pequeñas */
+    font-size: 1rem;
+  }
+  
+  h4 {
+    text-decoration: underline; /*texto subrayado*/
+    margin-bottom: 0.5rem; /* Reduce el margen inferior para ahorrar espacio */
+  }
+
+
+
+
+  /* Happy Customers */
+
+  .textoCentro {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%; 
+    padding: 1rem; /* Ajusta el padding para adaptarse a pantallas más pequeñas */
+  }
+  
+  .textoCentro h2{
+    text-align: start;
+  }
+
+  .textoCentro p {
+    text-align: start;
+  }
+  h2, p {
+    margin: 0.5rem 0; /* Ajusta los márgenes superiores e inferiores para ahorrar espacio */
+  }
+  
+  .carousel-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos del carrusel se envuelvan cuando el ancho de la pantalla es menor */
+    overflow-x: auto; /* Añade desplazamiento horizontal en caso de que los elementos se desborden */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    gap: 1rem; /* Ajusta el espacio entre los elementos para adaptarse a pantallas más pequeñas */
+    padding: 0.5rem; /* Ajusta el padding para adaptarse a pantallas más pequeñas */
+    overflow: hidden; /* Oculta el desbordamiento horizontal */
+  }
+  
+  .column {
+    flex: 0 0 calc(50% - 1rem); /* Ajusta el ancho de las columnas para adaptarse a pantallas más pequeñas */
+    scroll-snap-align: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+  }
+  
+  .review {
+    border-radius: 5%; /* Ajusta el borde redondo para adaptarse a pantallas más pequeñas */
+    text-align: center;
+    background-color: var(--amarillo); /* Color de fondo de los comentarios */
+    width: 17rem;
+    overflow-wrap: break-word; /* Permite el ajuste de línea en palabras largas */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin-bottom: 1rem; /* Agrega margen inferior para separar los elementos */
+    padding: 1rem; /* Ajusta el padding para adaptarse a pantallas más pequeñas */
+  }
+  
+  .review img {
+    width: 8rem; /* Ajusta el ancho de la imagen para adaptarse a pantallas más pequeñas */
+    height: 8rem; /* Ajusta la altura de la imagen para adaptarse a pantallas más pequeñas */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1rem; /* Ajusta el margen superior para adaptarse a pantallas más pequeñas */
+    transform: translateX(-50%); /* Centra la imagen horizontalmente */
+    left: 50%; /* Centra la imagen horizontalmente */
+  }
+  
+  .review h3 {
+    font-size: 1rem; /* Ajusta el tamaño de fuente para adaptarse a pantallas más pequeñas */
+    margin: 0.25rem 0; /* Ajusta los márgenes superiores e inferiores para ahorrar espacio */
+    padding-top: 4rem; /* Ajusta el padding superior para adaptarse a pantallas más pequeñas */
+  }
+  
+  .review p {
+    font-size: 0.875rem; /* Ajusta el tamaño de fuente para adaptarse a pantallas más pequeñas */
+  }
+  
+  .buttons-container {
+    text-align: center;
+    margin-top: 0.
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVE 768x1024 */
+@media (min-width: 768px) and (max-width: 1439px) {
+ 
+    .menu-icon,
+    .menu-content {
+      display: none;
+    }
+  
+  header {
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: var(--amarillo);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .header-izq {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+  }
+  
+  #logo {
+    font-family: "Barrio";
+    font-size: 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0rem;
+  }
+
+  
+  
+  input[type="search"] {
+    padding: 0.5rem;
+    padding-left: 1.3rem;
+    text-indent: 1.3rem;
+    width: 8rem;
+    border: none;
+    border-radius: 1.4rem;
+  }
+  
+  input[type="search"]:focus {
+    outline: none;
+  }
+  
+  
+  .header-der {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+  }
+  
+  .header-der-icono {
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .buscador {
+    position: relative;
+  }
+  
+  #buscador {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.8rem;
+    font-size: 1rem;
+    color: #a7a7a7;
+    opacity: 0.5;
+  }
+  
+
+
+
+  /*HERO*/
+
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(img/libros.jpg) center center no-repeat;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4.375rem;
+  }
+  
+  .hero-texto h1,
+  .hero-texto h2 {
+    color: var(--blanco);
+    text-align: center;
+  }
+  
+  .hero-texto h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-texto h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    height: 7.5rem;
+  }
+  
+  .menu-generos {
+    display: flex;
+    background-color: var(--amarillo);
+    padding: 1rem 1rem;
+    border-radius: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+  
+  .menu-generos a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-right: 0.0938rem solid var(--negro);
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+  }
+  
+  .menu-generos a:first-child {
+    padding-left: 0;
+  }
+  
+  .menu-generos a:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  
+  /*container*/
+  .container {
+    width: 90%; /* Reducir el ancho del contenedor para adaptarse a la resolución */
+  }
+
+  /*generos*/
+  .genero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .texto-ficcion h1 {
+    font-size: 2.5rem; /* Ajustar el tamaño de la fuente para adaptarse a la resolución */
+  }
+
+  .texto-ficcion p {
+    max-width: 25rem; /* Ajustar el ancho máximo del párrafo */
+  }
+
+  #foto-ficcion {
+    width: 25rem; /* Ajustar el ancho de la imagen */
+    height: 25rem; /* Ajustar la altura de la imagen */
+  }
+
+  .comprar {
+    font-size: 1.2rem; /* Ajustar el tamaño de la fuente del botón */
+    padding: 1rem 2rem; /* Ajustar el padding del botón */
+  }
+
+  /*Popular*/
+
+  .popular h1 {
+    border-bottom: 0.125rem solid var(--amarillo);
+    max-width: 100%;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .punto {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .punto::after {
+    content: "";
+    position: absolute;
+    top: -12%;
+    left: 215%;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    color: var(--amarillo);
+    background-color: var(--amarillo);
+  }
+  
+  .popular-contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .libro-popular {
+    width: 100%;
+    
+  }
+  .libro-imagen{
+    width: 100%;
+    height: 40vh;
+  };
+  
+  .libro-imagen-1,
+  .libro-imagen-2,
+  .libro-imagen-3 {
+    background: url(img/libro1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 23rem;
+  }
+  
+  .libro-imagen-2 {
+    background: url(img/libro2.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .libro-imagen-3 {
+    background: url(img/libro3.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .libro-popular-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--amarillo);
+    height: 8rem;
+    border: 0.0625rem solid var(--negro);
+  }
+  
+  .libro-popular-texto {
+    flex: 4;
+    padding: 0.8rem;
+    border-right: 0.0625rem solid var(--negro);
+  }
+  
+  .libro-popular-texto p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  
+  .libro-popular-comprar a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 0.5rem;
+  }
+
+
+    /*En oferta*/
+
+    en-oferta h1 {
+      max-width: fit-content;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .ofertas-contenedor {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      border-top: 0.125rem solid var(--negro);
+      border-bottom: 0.125rem solid var(--negro);
+      padding: 2rem 0;
+    }
+    
+    .libro-oferta {
+      height: 18.75rem;
+      width: 12.5rem;
+      box-shadow: -0.5625rem 0.875rem 0rem 0rem var(--amarillo);
+    }
+    
+    .libro-oferta img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /*libros biograficos*/
+
+    .libros-biograficos {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .libros-biograficos h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .libros-biograficos p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .libros-biograficos-contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    
+    .libro-biografico {
+      padding: 1.5rem;
+      border: 0.3rem solid var(--amarillo);
+      margin: 0.5rem;
+      max-width: 100%;
+    }
+    
+    .libro-biografico img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .puntos-contenedor {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    
+    .punto-biografico {
+      border-radius: 50%;
+      color: var(--amarillo);
+      background-color: var(--amarillo);
+      width: 1rem;
+      height: 1rem;
+    }
+   
+
+    /* About US*/
+
+    .aboutUs {
+      background-color: var(--amarillo);
+      display: flex;
+   
+      flex-wrap: wrap;
+    }
+    
+    .claseImagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+    }
+    
+    .imgLibros {
+      max-width: 80%;
+      min-width: 15.625rem;
+      height: auto;
+    }
+    
+    .divTexto {
+      max-width: 55rem;
+      margin: 1rem;
+    }
+    
+    .divTexto p {
+      line-height: 2rem;
+    }
+    
+    h4 {
+      text-decoration: underline; /* texto subrayado */
+    }
+    
+
+
+
+    /* Happy Customers */
+
+
+    .sect{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .textoCentro {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 100%;
+      padding: 1rem;
+    }
+    
+    h2,
+    p {
+      margin: 0.650rem 0;
+    }
+    
+    .carousel-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      width: 100%;
+      gap: 1.25rem;
+      padding: 0.625rem;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+    
+    .column {
+      flex: 0 0 calc(33.33% - 2.5rem);
+      scroll-snap-align: center;
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+      margin-left: 6.5rem;
+    }
+    
+    .review {
+      border-radius: 3%;
+      text-align: center;
+      background-color: var(--amarillo);
+      width: 28.75rem;
+      overflow-wrap: break-word;
+      height: 15.625rem;
+      position: relative;
+    }
+    
+    .review img {
+      width: 8.75rem;
+      height: 8.75rem;
+      object-fit: cover;
+      border-radius: 50%;
+      top: -15%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .review h3 {
+      font-size: 1.125rem;
+      margin: 0.0625rem;
+      padding-top: 6.875rem;
+    }
+    
+    .review p {
+      font-size: 0.875rem;
+    }
+    
+    .buttons-container {
+      text-align: center;
+      margin-top: 0.625rem;
+    }
+    
+    .column-button {
+      display: inline-block;
+      border-radius: 50%;
+      background-color: gray;
+      border: none;
+      margin: 0 0.3125rem;
+      cursor: pointer;
+      opacity: 0.5;
+      background-color: var(--amarillo);
+      width: 1rem;
+      height: 1rem;
+    }
+    
+    .column-button.active {
+      opacity: 1;
+    }
+    
+    .estrellas {
+      display: flex;
+      justify-content: center;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1440px) and (max-width: 2000px){
+  .menu-icon,
+  .menu-content {
+    display: none;
+  }
+
+
+  header {
+    height: 4.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem; /* Reducir el padding lateral para ajustar el contenido */
+    background-color: var(--amarillo);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  /*generos*/
+
+  .genero {
+    display: flex;
+    justify-content:space-evenly;
+  }
+
+  /* About Us */
+  .aboutUs {
+    background-color: var(--amarillo);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .divTexto{
+    max-width: 40rem;
+  }
+
+  /*Happy Customers*/
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.625rem;
+  }
+  
+  .column {
+    flex: 0 0 calc(33.33% - 1.25rem);
+    scroll-snap-align: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;  
+  }
+  
+  
+  
+  .review {
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--amarillo);
+    width: 23.75rem;
+    overflow-wrap: break-word;
+    height: 15.625rem;
+    position: relative;
+  }
+  
+  .review img {
+    width: 8.75rem;
+    height: 8.75rem;
+    object-fit: cover;
+    border-radius: 50%;
+    top: -15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .review h3 {
+    font-size: 1.125rem;
+    margin: 0.3125rem;
+    padding-top: 6.875rem;
+  }
+  
+  .review p {
+    font-size: 0.875rem;
+  }
+  
+  .buttons-container {
+    text-align: center;
+    margin-top: 0.625rem;
+  }
+  
+  .column-button {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: gray;
+    border: none;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+    opacity: 0.5;
+    background-color: var(--amarillo);
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .column-button.active {
+    opacity: 1;
+  }
+  
+  .estrellas {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+}
+
+

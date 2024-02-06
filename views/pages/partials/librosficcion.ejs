@@ -1,0 +1,57 @@
+<%- include('head') %>
+<%- include('header') %>
+
+<div class="container-comprar container">
+  <h1>Resultados de búsqueda de libros</h1>
+  <% if (books.length > 0) { %>
+    <div class="libros-container">
+      <% books.forEach((libro) => { %>
+        <div class="book">
+          <h2><%= libro.titulo %></h2>
+          <a href="/libro/<%= libro._id %>"><img src="<%= libro.imagen %>" alt="Tapa del libro"></a>
+          <p>Autor: <%= libro.autor %></p>
+          <% if (libro.precio !== undefined) { %>
+            <p>Precio: $<%= libro.precio %></p>
+          <% } %>
+          <% if (libro.stock !== undefined) { %>
+            <p>Stock: <%= libro.stock %></p>
+          <% } %>
+          <div class="libro-popular-comprar">
+            <form action="/agregar-al-carrito" method="post">
+              <input type="hidden" name="libroId" value="<%= libro._id %>">
+              <input type="hidden" name="titulo" value="<%= libro.titulo %>">
+              <input type="hidden" name="precio" value="<%= libro.precio %>">
+              <input type="hidden" name="imagen" value="<%= libro.imagen %>">
+              <input type="hidden" name="stock" value="<%= libro.stock %>">
+              <button type="submit">Agregar al carrito</button>
+            </form>
+            <form action="/comprar" method="post">
+              <input type="hidden" name="libroId" value="<%= libro._id %>">
+              <input type="hidden" name="titulo" value="<%= libro.titulo %>">
+              <input type="hidden" name="precio" value="<%= libro.precio %>">
+              <select id="stock" name="stock">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button type="submit">Comprar</button>
+            </form>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <p>No se encontraron libros.</p>
+  <% } %>
+</div>
+
+<%- include('footer') %>
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+.contenedor-descripcion{
+    height: 74vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   margin-bottom: 10px;
+
+}
+
+.posicion-libro{
+    width: 55%;
+    border: 1px solid  ;
+    border-radius: 15px;
+}
+.descripcion-libro{
+    margin:10px;
+}

@@ -1,0 +1,55 @@
+
+
+<%- include('../../pages/partials/head') %>
+<div class="login-admin" >
+    <a class="login-admin" href="/loginAdmin">ADMIN</a>
+</div>
+
+<div class='login-mensaje'>
+<%- include('../../pages/partials/mensajes') %>
+</div>
+<div class="contenedor-login">
+    
+      
+  
+  
+   
+    <div class="login-registrarse">
+        <h3 class="titulo-registrarse">Por favor registrate.</h3>
+        <form action="/registrarse" method="POST"> 
+            <div>
+                <input class="input-login" type="text" name="nombre" placeholder="nombre">
+            </div>
+            <div>
+                <input class="input-login"  type="email" name="email" placeholder="ingrese su email">
+            </div>
+            <div>
+                <input class="input-login" type="password" name="password" placeholder="ingrese su password">
+            </div>
+            
+            <button class="btn-registrarse" type="submit">Registrarse</button>
+        </form>
+    </div>
+
+ 
+
+<div class="login-ingresar">
+    <h3 class="titulo-sesion">Inicia sesion.</h3>
+    <form action="/login" method="post">
+        
+        <input class="input-login"  type="text" name="email" placeholder="Email">
+        <input class="input-login"  type="text"name="password"placeholder="ingrese su contraseña">
+        <div class="login-boton">
+            <a class="ancla-olvide-login" href="/olvide">olvido su contraseña?</a>
+            
+            <button class="btn-login" type="submit">ingresar como usuarios</button>
+            
+        </div>
+       
+    </form>
+    
+</div>
+
+</div>
+
+<%- include('../../pages/partials/footer') %>

@@ -1,0 +1,20 @@
+
+
+<%- include('../../pages/partials/head') %>
+<div class="container-stock">
+  <div class="contenedor-boton-stock">
+    <h2 class="titulo-stock">Libros con stock</h2>
+    <% Libros.forEach((libro) => { %>
+      <% if (libro.stock > 0) { %>
+        <p class="libros-stock">Libro: <%= libro.titulo %>/// Stock: <%= libro.stock %></p>
+      <% } %>
+    <% }) %>
+    <a class="ancla-stock" href="/panel">Volver al panel</a>
+  </div>
+
+
+  </div>
+
+  
+  
+<%- include('../../pages/partials/footer') %>

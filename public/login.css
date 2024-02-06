@@ -1,0 +1,182 @@
+
+/*registrarse*/
+.contenedor-login{
+    background-color: rgb(235,235,235);
+    height: 45vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+.contenedor-loginAdmin{
+    height: 74vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    width: 100vw;
+    background-color: rgb(235,235,235)
+
+   }
+.input-login{
+
+    width: 320px;
+    height: 40px;
+    border-radius: 17px;
+   border: 1px solid #e1dddd;
+    margin:10px ;
+    padding: 10px;
+}
+
+.titulo-sesion{
+    margin: 11px;
+}
+.ancla-olvide-login{
+    margin-left: 13px;
+    color: blue;
+}
+
+
+ 
+  .boton:hover{
+    background:linear-gradient(rgba(231, 216, 6, 0.4) 0%,rgba(239, 243, 24, 0.4) ) ;
+    color: white;
+  }
+  .btn-registrarse{
+      width: 107px;
+      height: 35px;
+      color:rgb(59,47,10);
+      padding: 5px ;
+      margin-top: 30px;
+      margin-left: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 20px;
+      border: 2px solid #ffd819;
+      background:rgb(255,193,7);
+  }
+  .btn-registrarse:hover {
+      background: #fff;
+      color: #ffd819
+  }
+  .btn-login{
+    width: 211px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: 30px;
+    margin-left: 73px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+
+  }
+  .btn-login:hover {
+    background: #fff;
+    color: #ffd819
+}
+  
+.login-mensaje{
+    display: flex;
+    background-color: #ebebeb;
+    height: 19vh;
+    align-items: center;
+    justify-content: flex-start;
+
+
+}
+.login-registrarse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    height: 72%;
+    border: 1px solid #e1dddd;
+    border-radius: 10px;
+
+}
+/*ancla administrador*/
+.login-admin{
+  display: flex;
+  justify-content: flex-end;
+  background-color:#ebebeb ;
+  color: blue;
+  padding: 19px;
+}
+
+/*----------------------------------------------------------------------------*/
+
+/*registro admin*/
+.contenedor-registrarse-admin{
+  height: 74vh;
+}
+.titulo-registrarse-admin{
+  margin-right: 61px;
+}
+.ancla-registrarse-admin{
+  margin-left: 16px;
+  text-decoration: none;
+}
+
+.admin-registrarse{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  height: 100%;
+  border: 1px solid #e1dddd;
+  border-radius: 10px;
+
+
+}
+.input-registrarse-admin{
+  width: 320px;
+  height: 40px;
+  border-radius: 17px;
+  border: 1px solid #e1dddd;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+
+
+
+/*tabla editar usuarios admin*/
+.tabla-editar-usuarios{
+  width: 50%;
+}
+.tbody-tabla{
+  background-color: rgb(255,193,7);
+}
+
+
+
+/*---------------------------------------------------------------------------------*/
+
+
+
+
+
+  /*productos admin    verrrrrr*/
+
+  .productos-admin{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 11%;
+    margin: 21px;
+
+  }

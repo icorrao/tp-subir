@@ -1,0 +1,33 @@
+<%- include('../../pages/partials/head') %>
+<div class="contenedor-ancla-productos">
+  <a class="anclas-productos" href="/panel">Volver al panel</a>
+</div>
+<div class="admin-container" >
+
+  <% Libros.forEach((libro) => { %>
+ 
+    <div class="productos-admin">
+      <img src="<%= libro.imagen %>" alt="Imagen del libro" style="width: 250;height: 65%;">
+      <h3><%= libro.titulo%></h3>
+   
+      
+        <p>Precio: $<%= libro.precio %></p>
+        <p>Stock: <%= libro.stock %></p>
+        <td>
+            <a class="ancla-productos-1" href="/editar/producto/admin/<%= libro.id %>">Editar</a>
+
+           <form action="/eliminar/libro/<%=libro.id%>?_method=DELETE" method="POST">
+                <input type="hidden"name="_method " value="DELETE">
+                <button class="btn-eliminar-libro" type="submit" >eliminar</button>
+            </form>           
+        </td>
+      </div>
+    
+    <% }) %> 
+    
+  </div> 
+  <div class="contenedor-ancla-productos">
+    <a class="anclas-productos" href="/panel">Volver al panel</a>
+  </div>
+
+  <%- include('../../pages/partials/footer') %>

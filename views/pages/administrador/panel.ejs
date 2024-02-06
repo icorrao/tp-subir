@@ -1,0 +1,56 @@
+<%- include('../../pages/partials/head') %>
+
+
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <h4 class="titulo-sidebar">Usuarios:</h4>
+      <a href="/todosUsuarios">Todos los usuarios</a>
+      <h4 class="titulo-sidebar">Estados de los libros :</h4>
+      <a href="/productos/admin">Editar productos</a>
+      <a href="/total/stock">Libros con stock</a>
+      <a href="/libros/agotados">Libros agotados</a>
+    </div>
+    
+    <div class="main-content">
+      <div class="navbar-panel">
+      
+        <%- include('../../pages/partials/mensajes') %>
+        <% if (currentAdmin) { %>
+          <a href="/logout"> <i class="fa-solid fa-user header-der-icono">  <%= currentAdmin %></i>Cerrar sesión</a>
+        <% } else { %>
+          <a href="/login"><i class="fa-solid fa-user header-der-icono"></i></a>
+        <% } %>
+     
+      </div>
+      <% let total = 0, instock = 0, outofstock = 0, pricechanged = 0, backinstock = 0, updated = 0, notupdated = 0 %>
+      <% Libros.forEach((libro) => { %>
+        <% total += libro.stock %>
+        <% instock++ %>
+        <% if (libro.stock === 0) { outofstock++ } %>
+        <% if (libro.precioCambiado) { pricechanged++ } %>
+        <% if (libro.reponer) { backinstock++ } %>
+        <% if (libro.actualizado) { updated++ } else { notupdated++ } %>
+      <% }) %>
+      <h2 class="data-titulo">Resumen de stock</h2>
+      <div class="data-visualisacion">
+        <div class="data-1">
+        <p class="data-total-stock">Total de stock: <span id="total-stock"><%= total %></span></p>
+        <p class="data-total-stock">Cantidad de libros: <%= instock %></p>
+        <p class="data-total-stock" >Libros agotados: <%= outofstock %></p>
+       
+      </div>
+      <div class="data-2">
+        <p class="data-total-stock" >Libros con cambio de precio: <%= pricechanged %></p>
+        <p class="data-total-stock" >Libros para reponer: <%= backinstock %></p>
+        <p class="data-total-stock" >Libros actualizados: <%= updated %></p>
+       
+      </div>
+      <div class="data-3">
+      <p class="data-total-stock">Libros no actualizados: <%= notupdated %></p>
+    </div>
+      </div>
+      </div>
+      </div>
+      
+
+  <%- include('../../pages/partials/footer') %>

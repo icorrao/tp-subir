@@ -1,0 +1,84 @@
+  /*editar libros*/
+  .libros-editar{
+    height: 74vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(235,235,235);
+  } 
+  
+  
+  .input-libros{
+  
+    width: 320px;
+    height: 40px;
+    border-radius: 5px;
+   border: 1px solid #ddd8d8;
+    margin:10px ;
+    padding: 10px;
+  } 
+  .contenedor-boton-editar-libros{
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+  } 
+  .boton-editar-libros{
+    margin-left: 11px;
+    width: 138px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: 20px;
+    margin-left: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+
+  }
+  .boton-editar-libros:hover {
+    background: #fff;
+    color: #ffd819
+}
+
+  
+  .titulo-editar-libros{
+    width: 17%;
+    height: 10%;
+}
+  
+  .ancla-editar-libros{
+    
+    width: 138px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: 20px;
+    margin-left: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+    text-decoration: none;
+    text-align: center;
+  }
+  .ancla-editar-libros:hover {
+    background: #fff;
+    color: #ffd819
+}
+.editar-precio{
+    margin-left: 10px;
+    font-size: 13px;
+}
+  

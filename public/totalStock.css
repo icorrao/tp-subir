@@ -1,0 +1,45 @@
+.container-stock{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235,235,235);
+}
+.contenedor-boton-stock{
+    width: 27%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.titulo-stock{
+width: 35%;
+}
+.libros-stock{
+    background-color: beige;
+    width: 100%;
+}
+.ancla-stock{
+    width: 122px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: 30px;
+    margin-left: -2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+    text-decoration: none;
+    
+
+  }
+  .ancla-stock:hover {
+    background: #fff;
+    color: #ffd819
+}

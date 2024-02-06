@@ -1,0 +1,49 @@
+.container-libros-agotados{
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(235,235,235);
+}
+.titulo-libros-agotados{
+    
+    
+    width: 35%;
+}
+.libros-agotados{
+    background-color: beige;
+    width: 35%;
+}
+
+.contenedor-boton-agotado{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+.boton-agotado{
+    
+        width: 138px;
+        height: 35px;
+        color:rgb(59,47,10);
+        padding: 5px ;
+        margin-top: 30px;
+        margin-left: 73px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 20px;
+        border: 2px solid #ffd819;
+        background:rgb(255,193,7);
+    
+      }
+      .boton-agotado:hover {
+        background: #fff;
+        color: #ffd819
+    }
+    .ancla-agotado{
+        text-decoration: none;
+    }
+      

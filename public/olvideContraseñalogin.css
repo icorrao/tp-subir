@@ -1,0 +1,64 @@
+/*olvide contraseña de iniciar sesion login*/
+.olvide-contraseña{
+    height: 74vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+  .titulo-restablecer-contraseña{
+
+    margin-right: 243px ;
+  }
+
+  .ancla-restablecer-contraseña{
+
+    text-decoration: none;
+    width: 117px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+}
+.ancla-restablecer-contraseña:hover {
+    background: #fff;
+    color: #ffd819
+}
+  
+  
+  .olvide-container{
+    background-color: rgb(235,235,235);
+  }
+.btn-olvide{
+  
+    width: 107px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+}
+.btn-olvide:hover {
+    background: #fff;
+    color: #ffd819
+}

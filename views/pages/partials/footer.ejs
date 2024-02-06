@@ -1,0 +1,123 @@
+
+
+<div class='contenedor_Footer'>
+    <div class='contenedor_Menu'>
+        <div class='menuFooter'>
+            <div class='menu'>
+                <h5 class='tituloAnclas' href="">Bookish</h5>
+                <a class='anclas' href="">Acerca de</a>
+                <a class='anclas' href="">Equipo</a>
+                <a class='anclas' href="/politicas">Politicas</a>
+                <a class='anclas' href="">Carreras</a>
+                <a class='anclas' href="">Prensa</a>
+            </div>
+
+            <div class='menu'>
+                <h5 class='tituloAnclas' href="">Explorar</h5>
+                <a class='anclas' href="/">Inicio</a>
+                <a class='anclas' href="">Acerca de </a>
+                <a class='anclas' href="">Confianza y seguridad</a>
+                <a class='anclas' href="">Sostenibilidad</a>
+                <a class='anclas' href="">Preguntas frecuentes</a>
+                <a class='anclas' href="">Ayuda</a>
+            </div>
+
+            <div class='menu'>
+                <h5 class='tituloAnclas' href="">Principales ciudades</h5>
+                <a class='anclas' href="">Buenos Aires</a>
+                <a class='anclas' href="">Rosario</a>
+                <a class='anclas' href="">Cordoba</a>
+                <a class='anclas' href="">Tucuman</a>
+                <a class='anclas' href="">San Luis</a>
+                <a class='anclas' href="">Mendoza</a>
+            </div>
+
+            <div class='menu'>
+                <h5 class='tituloAnclas' href="">Sección</h5>
+                <a class='anclas' href="">Entrga</a>
+                <a class='anclas' href="">Precios</a>
+                <a class='anclas' href="">Pagos</a>
+                <a class='anclas' href="">Escritores</a>
+            </div>
+        </div>
+        <div class='redes_Footer'>
+
+            <h3 class='titulo_redes'>Bookish</h3>
+            <a class='redes' href="https://www.youtube.com/"><i class="fa-brands fa-youtube "></i></a>
+            <a class='redes'  href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram "></i></a>
+            <a class='redes'  href="https://es-la.facebook.com/"><i class="fa-brands fa-facebook "></i></a>
+            <a class='redes'  href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+
+            
+           
+
+        </div>
+     
+    
+    </div>
+    
+   
+
+    <div class='raya'></div>
+
+    <div class="contenedor-parrafo-footer">
+    <p class='parrafoFooter'>copyright @ 2023 turo corporation All rights reserved </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+      // Inicializar el carrusel con Slick Carousel
+      $(document).ready(function(){
+        $('#libros-carousel').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button type="button" class="slick-next">Next</button>',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      });
+    </script>
+    <script>
+      const menuIcon = document.getElementById('menu-icon');
+      const menuContent = document.querySelector('.menu-content');
+    
+      menuIcon.addEventListener('click', () => {
+        menuContent.classList.toggle('active');
+      });
+   
+    
+    </script>
+      <script>
+        document.getElementById('buscar').addEventListener('keydown', function(event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            buscarLibros();
+          }
+        });
+      
+        document.getElementById('buscador').addEventListener('click', function(event) {
+          buscarLibros();
+        });
+      
+        function buscarLibros() {
+          const query = document.getElementById('buscar').value;
+          window.location.href = '/buscar?query=' + query;
+        }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<%- include('../../pages/partials/head') %>
+
+
+<div class="libros-editar">
+    <h1 class="titulo-editar-libros">Editar libros</h1>
+    <%- include('../../pages/partials/mensajes.ejs') %>
+    
+    <div>
+        <form action="/editar/producto/admin/<%= libro.id %>?_method=PUT" method="POST"> 
+            <input type="hidden"name=_method value="PUT">
+
+            <div>
+                <h6 class="editar-precio">Precio</h6>
+                <input class="input-libros" value="<%= libro.precio %>" type="text" name="precio"placeholder="ingrese su precio">
+                <h6 class="editar-precio">Stock</h6>
+                <input class="input-libros" value="<%= libro.stock %>" type="text" name="stock"placeholder="ingrese su stock">
+            </div>
+           
+           <div class="contenedor-boton-editar-libros">
+            <button class="boton-editar-libros" type="submit">Actualizar datos</button>
+            <a class="ancla-editar-libros" href="/panel">Volver al panel</a>
+
+           </div>
+            
+
+          
+        </form>
+    </div>
+</div>
+<%- include('../../pages/partials/footer') %>

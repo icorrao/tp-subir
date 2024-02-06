@@ -1,0 +1,241 @@
+/*formulario*/
+
+*:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .ContenedorFormulario{
+   background:linear-gradient(rgba(14, 13, 13, 0.4) 0%,rgba(14, 13, 13, 0.4) ), url('./img/formulario1.jpg')center,no-repeat;
+   background-size: cover;
+   width: 100vw;
+   height: 70vh;
+  }
+  .contenedor_Titulo_Parrafo{
+    width: 100vw;
+    height: 161px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color:rgb(255,255,255) ;
+  }
+  .tituloForm{
+    color: white;
+    font-size: 31px;
+    margin-bottom: -4px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .parrafo{
+    color: white;
+    width: 56%;
+    font-size: 16px;
+    text-align:center;
+    margin-top: 29px;
+    font-family: 'Roboto', sans-serif
+  }
+  
+  .Formulario{
+    margin-top: 53px;
+  }
+  
+  
+  .input_1{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+  
+  }
+  .inputNombre{
+    width: 517px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .inputGmail{
+    width: 517px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .input_2{
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+  }
+  
+  .descripcion{
+    width: 55%;
+    height: 30vh;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  ::placeholder{
+    padding: 10px 10px;
+  }
+  .boton{
+    border-radius: 20px;
+    width: 114px;
+    height: 35px;
+    padding: 5px;
+    margin-top: 30px;
+    background-color:rgb(255,193,7) ;
+    border: none;
+  }
+  .boton:hover{
+    background:linear-gradient(rgba(231, 216, 6, 0.4) 0%,rgba(239, 243, 24, 0.4) ) ;
+    color: white;
+  }
+  .css-button-fully-rounded--yellow {
+      width: 114px;
+      height: 35px;
+      color:rgb(59,47,10);
+      padding: 5px ;
+      margin-top: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      border-radius: 20px;
+      border: 2px solid #ffd819;
+      background:rgb(255,193,7);
+  }
+  .css-button-fully-rounded--yellow:hover {
+      background: #fff;
+      color: #ffd819
+  }
+  
+  
+  @media (min-width: 390px ) and (max-width: 767px){
+    .contenedor_Titulo_Parrafo {
+      width: 100vw;
+      height: 218px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      color: rgb(255,255,255);
+  }
+  .tituloForm {
+    color: white;
+    font-size: 31px;
+    margin-bottom: -14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.parrafo {
+  color: white;
+  width: 81%;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 29px;
+  font-family: 'Roboto', sans-serif;
+}
+.Formulario {
+  margin-top: 16px;
+}
+    .inputNombre {
+      width: 136px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+  }
+  .inputGmail {
+    width: 136px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+    .descripcion {
+      width: 75%;
+      height: 25vh;
+   
+  }
+
+
+  }
+  @media (min-width: 767px ) and (max-width: 1440px){
+    .contenedor_Titulo_Parrafo {
+      width: 100vw;
+      height: 208px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      color: rgb(255,255,255);
+  }
+  .tituloForm {
+    color: white;
+    font-size: 31px;
+    margin-bottom: -4px;
+    font-family: 'Open Sans', sans-serif;
+}
+.parrafo {
+  color: white;
+  width: 65%;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+.Formulario {
+  margin-top: 17px;
+}
+    .inputNombre {
+      width: 250px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+  }
+  .inputGmail {
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.descripcion {
+  width: 68%;
+  height: 30vh;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+  }
+  @media (min-width: 1440px ) and (max-width: 1441px){
+    .inputNombre {
+      width: 480px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+  }
+  .inputGmail {
+    width: 480px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+  }

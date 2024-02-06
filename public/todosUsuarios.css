@@ -1,0 +1,76 @@
+
+/*pagina todos los usuarios -admin*/
+.admin-titulo{
+    padding: 45px;
+}
+.admin-usuarios{
+    height: 56vh ;
+    padding: 45px;
+}
+.container-usuarios{
+  background-color: rgb(235,235,235);
+  height: 74vh;
+}
+.container-editar-eliminar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 63px;
+}
+.ancla-editar-usuarios{
+  text-decoration: none;
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  width:60px ;
+  text-align: center;
+}
+.btn-eliminar{
+  border-radius: 10px;
+  border: none;
+  width: 72px;
+  color: white;
+  background-color: red;
+  height: 20px;
+  cursor: pointer;
+}
+.titulo-tabla{
+  background-color:rgb(219, 171, 27) ;
+  height: 45px;
+}
+.usuarios-tabla{
+  height: 45px;
+}
+
+.contenedor-boton-usuarios{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+}
+.boton-todos-usuarios{
+    
+    width: 138px;
+    height: 35px;
+    color:rgb(59,47,10);
+    padding: 5px ;
+    margin-top: -13px;
+    margin-left: 47px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #ffd819;
+    background:rgb(255,193,7);
+
+  }
+  .boton-todos-usuarios:hover {
+    background: #fff;
+    color: #ffd819
+}
+.ancla-usuarios{
+    text-decoration: none;
+}
+  

@@ -1,0 +1,19 @@
+<h1 >New Password</h1>
+<div >
+    <%- include('../../pages/partials/mensajes') %>
+    <form action="/reset/<%=token%>" method="POST">
+
+        <div >
+            <input type="password" name="password" placeholder="Password">
+        </div>
+
+        <div>
+            <input type="password" name="confirmpassword"  placeholder="Confirm Password">
+        </div>
+
+        <button type="submit" >Change Password</button>
+    </form>
+</div>
+
+
+</div>

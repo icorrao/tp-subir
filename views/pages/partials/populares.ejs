@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="genero">
+    <div id="foto-ficcion"></div>
+    <div class="texto-ficcion">
+      <h1>Ficción</h1>
+      <p>
+        Los libros de ficción se pueden clasificar en una variedad de
+        géneros, que incluyen romance, ciencia ficción, misterio, terror,
+        fantasía y más. Cada género tiene sus propias convenciones, temas y
+        estilos únicos que se adaptan a las preferencias de los diferentes
+        lectores.
+      </p>
+      <p>
+        En nuestra librería en línea, ofrecemos una amplia selección de
+        libros de ficción para que los lectores elijan. Nuestra colección
+        incluye todo, desde clásicos atemporales hasta los últimos éxitos de
+        ventas, lo que garantiza que siempre haya algo nuevo y emocionante
+        por descubrir.
+      </p>
+      <a href="#" class="comprar">Comprar ahora</a>
+    </div>
+  </div>
+
+ <!-- <div class="popular">
+    <h1>Popular</h1>
+    <div class="punto"></div>
+
+    <div class="popular-contenedor">
+      <div class="libro-popular">
+        <div class="libro-imagen-1"></div>
+        <div class="libro-popular-info">
+          <div class="libro-popular-texto">
+            <p>Libro 1</p>
+            <p>$45.99</p>
+          </div>
+          <div class="libro-popular-comprar">
+            <a href="#">Comprar</a>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <div class="libro-popular">
+        <div class="libro-imagen-2"></div>
+        <div class="libro-popular-info">
+          <div class="libro-popular-texto">
+            <p>Libro 2</p>
+            <p>$45.99</p>
+          </div>
+          <div class="libro-popular-comprar">
+            <a href="#">Comprar</a>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+      <div class="libro-popular">
+        <div class="libro-imagen-3"></div>
+        <div class="libro-popular-info">
+          <div class="libro-popular-texto">
+            <p>Libro 3</p>
+            <p>$45.99</p>
+          </div>
+          <div class="libro-popular-comprar">
+            <a href="#">Comprar</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>-->
+
+    <div class="popular">
+      
+      <h1>Popular</h1> 
+      
+        <div class="punto"></div>
+      <div id="libros-carousel" >
+      <% libros.forEach((libro) => { %>
+      <div  class="popular-contenedor">
+        <div class="libro-popular">
+          
+          <div><a href="/libro/<%= libro._id %>"><img class="libro-imagen" src="<%= libro.imagen %>"></a></div>
+          <div  class="libro-popular-info">
+            <div  class="libro-popular-texto">
+              <p>Autor:<%= libro.autor %></p>
+              <p>Stock:<%= libro.stock %></p>
+              <p>$:<%= libro.precio %></p>
+            </div>
+            <div class="libro-popular-comprar">
+              <form action="/agregar-al-carrito" method="post">
+                <input type="hidden" name="libroId" value="<%= libro.id %>">
+                <input type="hidden" name="titulo" value="<%= libro.titulo %>">
+                <input type="hidden" name="precio" value="<%= libro.precio %>">
+                <input type="hidden" name="imagen" value="<%= libro.imagen %>">
+                <input type="hidden" name="stock" value="<%= libro.stock %>">
+                <button type="submit">Agregar al carrito</button>
+                
+              </form>
+              <form action="/comprar" method="post">
+                <input type="hidden" name="libroId" value="<%= libro.id %>">
+                <input type="hidden" name="titulo" value="<%= libro.titulo %>">
+                <input type="hidden" name="precio" value="<%= libro.precio %>">
+                <select id="stock" name="stock">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <button type="submit">comprar</button>
+                
+              </form>
+
+            </div>
+          </div>
+        </div>
+      
+
+      
+        
+    </div>
+    <% }) %>
+    </div>
+
+  </div>
+ 

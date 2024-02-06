@@ -1,0 +1,15 @@
+<% if(success_msg && success_msg != '') { %>
+  <div class="mensajesSucces">
+    <%= success_msg %>
+  </div>
+<% } else if(error_msg && error_msg != '') { %>
+  <div class="mensajesError">
+    <%= error_msg %>
+  </div>
+<% } %>
+
+<% if(error && error != '') { %>
+  <div class="error" >
+    <%= error %>
+  </div>
+<% } %>

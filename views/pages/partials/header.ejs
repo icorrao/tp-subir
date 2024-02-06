@@ -1,0 +1,58 @@
+
+    <header>
+      <div class="header-izq">
+        <h1 id="logo">Bookish</h1>
+        <nav>
+          <a href="/">Inicio</a>
+          <a href="#">Quienes Somos</a>
+          <a href="/enviar-correo">Contacto</a>
+          <a href="/comprar">Comprar </a>
+          <a href="#">Categorías</a>
+        </nav>
+      </div>
+      <div class="header-der">
+       
+        <div class="buscador">
+          <i class="fa-solid fa-magnifying-glass" id="buscador"></i>
+          <input type="search" name="buscar" id="buscar" placeholder="Buscar" />
+        </div>
+        <i class="fa-regular fa-bell header-der-icono"></i>
+        <a href="/carrito"><i class="fa-solid fa-cart-shopping header-der-icono"></i></a>
+       
+        <% if (currentUser) { %>
+          <a href="/logout"><i class="fa-solid fa-user header-der-icono"><%= currentUser %></i>Cerrar sesión </a>
+        <% } else { %>
+          <a href="/login"><i class="fa-solid fa-user header-der-icono"></i></a>
+        <% } %>
+     
+      </div>
+      <div class="menu-icon">
+
+        <a id="menu-icon"href="#"><i class="fa-solid fa-bars" ></i></a>
+      
+    
+
+      <div class="menu-content">
+           <div>
+            <i class="fa-solid fa-magnifying-glass" id="buscador"></i>
+            <input type="search" name="buscar" id="buscar" placeholder="Buscar" />
+          </div>
+          <i class="fa-regular fa-bell header-der-icono"></i>
+          <a href="/carrito"><i class="fa-solid fa-cart-shopping header-der-icono"></i></a>
+       
+          <% if (currentUser) { %>
+          <a href="/logout"><i class="fa-solid fa-user header-der-icono"><%= currentUser %></i>Cerrar sesión </a>
+          <% } else { %>
+          <a href="/login"><i class="fa-solid fa-user header-der-icono"></i></a>
+          <% } %>
+     
+       </div>
+        
+      </div>
+    </div>
+    </header>
+   
+
+
+
+

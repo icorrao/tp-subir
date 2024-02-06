@@ -1,0 +1,20 @@
+
+<%- include('../../pages/partials/head') %>
+
+<div class="contenedor-loginAdmin">
+
+    <form action="/login/admin" method="post">
+        <input class="input-login"  type="text" name="email" placeholder="correo">
+        <input class="input-login"  type="text"name="password"placeholder="ingrese su contraseña">
+        <div>
+            <a class="login-olvide" href="/olvide">olvido su contraseña?</a>
+            <a href="/registrarseAdmin">Registrarse</a>
+            <a href="/login">Volver al login</a>
+            <button class="btn-login" type="submit">ingresar como administrador</button>
+            <%- include('../../pages/partials/mensajes') %>
+        
+        </div>
+       
+    </form>
+</div>
+<%- include('../../pages/partials/footer') %>

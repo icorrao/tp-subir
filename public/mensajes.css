@@ -1,0 +1,38 @@
+.mensajesSucces{
+    
+    background-color: rgb(123, 241, 123);
+    color: white;
+    width: 662px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11px;
+    
+}
+.mensajesError{
+   
+    background-color: rgb(248, 85, 85);
+    color: white;
+    width: 662px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11px;
+} 
+.error{
+    
+    background-color: rgb(248, 85, 85);
+    color: white;
+    width: 662px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11px;
+}
+    

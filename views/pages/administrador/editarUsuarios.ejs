@@ -1,0 +1,34 @@
+
+
+
+<%- include('../../pages/partials/head') %>
+
+
+<div class="admin-editar">
+    <h1 class="titulo-editar">Editar Usuarios</h1>
+    <%- include('../../pages/partials/mensajes.ejs') %>
+    
+    <div>
+        <form action="/editar/<%= usuarios.id %>?_method=PUT" method="POST"> 
+            <input type="hidden"name=_method value="PUT">
+
+            <div>
+                <input class="input-admin" value="<%= usuarios.nombre %>" type="text" name="nombre"placeholder="ingrese su nombre">
+               
+            </div>
+            <div>
+                <input class="input-admin"  value="<%= usuarios.email %>" type="email" name="email"placeholder="ingrese su email">
+                
+            </div>
+           <div class="contenedor-editar-boton">
+            <button class="boton-editar" type="submit">Actualizar datos</button>
+            <a class="ancla-editar" href="/panel">Volver al panel</a>
+
+           </div>
+       
+
+          
+        </form>
+    </div>
+</div>
+<%- include('../../pages/partials/footer') %>
